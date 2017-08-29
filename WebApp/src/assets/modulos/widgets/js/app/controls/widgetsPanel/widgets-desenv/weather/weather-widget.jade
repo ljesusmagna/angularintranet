@@ -1,0 +1,38 @@
+//output: weather-widget.html
+style(type="text/css")
+  include styles.min.css
+
+div(data-bind="attr: { class: 'weather-widget line-'+LineNumber() }")
+  mixin MakeDay(dayNumber)
+    .day-item(data-bind="with: day_"+dayNumber)
+      span.day-text(data-bind="text: DateDisplay")
+      span.min-temp(data-bind="text: MinimumTemperature")
+      span.max-temp(data-bind="text: MaximumTemperature")
+      div(data-bind="attr: { title: WeatherDescription, class: 'icon-weather '+Weather() }")
+
+  h3.city(data-bind="text: CityName")
+  //State() === 'ok'
+  a.forecasts(data-bind="attr: { href: ServiceInfoURL }, visible: State() === 'ok'" target="_blank")
+    .forecast-featured
+      .day-area(data-bind="with: day_0")
+        div(data-bind="attr: { title: WeatherDescription, class: 'icon-weather '+Weather() }")
+        span.day-text(data-bind="text: DateDisplay")
+        .temps-text
+          span.min-temp(data-bind="text: MinimumTemperature")
+          span.max-temp(data-bind="text: MaximumTemperature")
+    
+    .forecasts-others
+      +MakeDay('1')
+      +MakeDay('2')
+      +MakeDay('3')
+  
+  //State() == 'fail'
+  .fail(data-bind="visible: State() == 'fail'")
+    p Sistema de previsão do tempo indisponível
+  
+  //State() == 'loading'
+  .loading(data-bind="visible: State() == 'loading'")
+    loader-spin(params="message: 'Buscando previsão do tempo...'")
+  
+script
+  include viewModel.min.js 

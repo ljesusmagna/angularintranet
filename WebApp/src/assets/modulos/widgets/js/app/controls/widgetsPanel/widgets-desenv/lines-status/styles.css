@@ -1,0 +1,114 @@
+.cptm-color-7 {
+  color: #A8034F;
+}
+
+.cptm-color-8 {
+  color: #A39E8C;
+}
+
+.cptm-color-9 {
+  color: #00AA9E;
+}
+
+.cptm-color-10 {
+  color: #00829B;
+}
+
+.cptm-color-11 {
+  color: #F55F1A;
+}
+
+.cptm-color-12 {
+  color: #1C146B;
+}
+
+.cptm-color-13 {
+  color: #00B352;
+}
+
+.cptm-color-14 {
+  color: #121C26;
+}
+
+.cptm-bg-7 {
+  background: #A8034F;
+}
+
+.cptm-bg-8 {
+  background: #A39E8C;
+}
+
+.cptm-bg-9 {
+  background: #00AA9E;
+}
+
+.cptm-bg-10 {
+  background: #00829B;
+}
+
+.cptm-bg-11 {
+  background: #F55F1A;
+}
+
+.cptm-bg-12 {
+  background: #1C146B;
+}
+
+.cptm-bg-13 {
+  background: #00B352;
+}
+
+.cptm-bg-14 {
+  background: #121C26;
+}
+
+.lines-status-widget {
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.lines-status-widget .box {
+  position: absolute;
+}
+
+.lines-status-widget .box .status {
+  float: left;
+  margin: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.lines-status-widget .box .status .status-number {
+  padding: 10px;
+  height: 40px;
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  display: block;
+}
+
+.lines-status-widget .box .status .status-name {
+  display: block;
+  font-weight: bold;
+  font-size: 0.60em;
+}
+
+.lines-status-widget .box .status .status-description {
+  display: none;
+  float: right;
+  font-size: 0.75em;
+}
+
+.lines-status-widget .box .status a.help-bubble {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
+.lines-status-widget .box .status a.help-bubble:after {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8) inset;
+  border-radius: 0% 0% 0% 55%;
+}

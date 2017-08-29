@@ -1,0 +1,28 @@
+
+<style type="text/css">.cptm-color-7{color:#a8034f}.cptm-color-8{color:#a39e8c}.cptm-color-9{color:#00aa9e}.cptm-color-10{color:#00829b}.cptm-color-11{color:#f55f1a}.cptm-color-12{color:#1c146b}.cptm-color-13{color:#00b352}.cptm-color-14{color:#121c26}.cptm-bg-7{background:#a8034f}.cptm-bg-8{background:#a39e8c}.cptm-bg-9{background:#00aa9e}.cptm-bg-10{background:#00829b}.cptm-bg-11{background:#f55f1a}.cptm-bg-12{background:#1c146b}.cptm-bg-13{background:#00b352}.cptm-bg-14{background:#121c26}.lines-status-widget{padding:10px;position:relative;width:100%;height:100%}.lines-status-widget .box{position:absolute}.lines-status-widget .box .status{float:left;margin:5px;text-align:center;position:relative}.lines-status-widget .box .status .status-number{padding:10px;height:40px;width:50px;text-align:center;font-weight:bold;color:white;display:block}.lines-status-widget .box .status .status-name{display:block;font-weight:bold;font-size:.60em}.lines-status-widget .box .status .status-description{display:none;float:right;font-size:.75em}.lines-status-widget .box .status a.help-bubble{position:absolute;top:-1px;right:-1px}.lines-status-widget .box .status a.help-bubble:after{box-shadow:0 0 2px rgba(0,0,0,0.8) inset;border-radius:0 0 0 55%}
+</style>
+<script> (function(c){var h=this,d=require("jquery"),i=require("moment"),b="http://moldavia:8082/CPTM.WebAPI/api/LineStatus/Situation";function g(j){this.lineNumber=j;this.situationColor=ko.observable("gray");this.description=ko.observable("");this.status=ko.observable("Serviço indisponível.")}this.lastUpdate=ko.observable();this.line_7=ko.observable(new g(7));this.line_8=ko.observable(new g(8));this.line_9=ko.observable(new g(9));this.line_10=ko.observable(new g(10));this.line_11=ko.observable(new g(11));this.line_12=ko.observable(new g(12));function e(j){switch(j){case"Operação Normal":return"green";case"Velocidade Reduzida":return"yellow";case"Paralisada":case"Operações Encerradas":return"red";default:return"gray"}}function f(l){for(var k=0;k<l.length;k++){var m=l[k],j=h["line_"+m.LinhaId];if(j){j().situationColor(e(m.Status));j().description(m.Descricao);j().status(m.Status)}}h.lastUpdate(i().format("[Atualizado às] h:mm:ss"))}(function a(){d.get(b,f);setTimeout(a,60000+Math.floor(Math.random()*10000))})()});
+</script>
+<div class="lines-status-widget">
+  <h4>Situação das Linhas</h4>
+  <div class="box">
+      <div data-bind="with: line_7" class="status">
+        <div data-bind="attr:{title:status()+': '+description()}" data-toggle="tooltip" class="cptm-color-7"><span class="status-number cptm-bg-7">7</span><span class="status-name">Rubi</span><a data-bind="attr: { 'class': 'help-bubble '+situationColor(), 'title':status()+': '+description()}" class="help-bubble"><span class="help-bubble-outer-dot"><span class="help-bubble-inner-dot"></span></span></a></div>
+      </div>
+      <div data-bind="with: line_8" class="status">
+        <div data-bind="attr:{title:status()+': '+description()}" data-toggle="tooltip" class="cptm-color-8"><span class="status-number cptm-bg-8">8</span><span class="status-name">Diamante</span><a data-bind="attr: { 'class': 'help-bubble '+situationColor(), 'title':status()+': '+description()}" class="help-bubble"><span class="help-bubble-outer-dot"><span class="help-bubble-inner-dot"></span></span></a></div>
+      </div>
+      <div data-bind="with: line_9" class="status">
+        <div data-bind="attr:{title:status()+': '+description()}" data-toggle="tooltip" class="cptm-color-9"><span class="status-number cptm-bg-9">9</span><span class="status-name">Esmeralda</span><a data-bind="attr: { 'class': 'help-bubble '+situationColor(), 'title':status()+': '+description()}" class="help-bubble"><span class="help-bubble-outer-dot"><span class="help-bubble-inner-dot"></span></span></a></div>
+      </div>
+      <div data-bind="with: line_10" class="status">
+        <div data-bind="attr:{title:status()+': '+description()}" data-toggle="tooltip" class="cptm-color-10"><span class="status-number cptm-bg-10">10</span><span class="status-name">Turquesa</span><a data-bind="attr: { 'class': 'help-bubble '+situationColor(), 'title':status()+': '+description()}" class="help-bubble"><span class="help-bubble-outer-dot"><span class="help-bubble-inner-dot"></span></span></a></div>
+      </div>
+      <div data-bind="with: line_11" class="status">
+        <div data-bind="attr:{title:status()+': '+description()}" data-toggle="tooltip" class="cptm-color-11"><span class="status-number cptm-bg-11">11</span><span class="status-name">Coral</span><a data-bind="attr: { 'class': 'help-bubble '+situationColor(), 'title':status()+': '+description()}" class="help-bubble"><span class="help-bubble-outer-dot"><span class="help-bubble-inner-dot"></span></span></a></div>
+      </div>
+      <div data-bind="with: line_12" class="status">
+        <div data-bind="attr:{title:status()+': '+description()}" data-toggle="tooltip" class="cptm-color-12"><span class="status-number cptm-bg-12">12</span><span class="status-name">Safira</span><a data-bind="attr: { 'class': 'help-bubble '+situationColor(), 'title':status()+': '+description()}" class="help-bubble"><span class="help-bubble-outer-dot"><span class="help-bubble-inner-dot"></span></span></a></div>
+      </div>
+  </div>
+</div>

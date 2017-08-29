@@ -1,0 +1,16 @@
+    <div class="header"><div class="icon icon_novidades"></div> Novidades</div>
+
+<div *ngFor="let not of noticias" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 noticia">
+	<div class="box-card">
+		<a href="/wps/portal/internet/novidades/detalhes/c64498df-7fac-4eb6-be7d-0a2991048431">
+			<div class="boxImg" [style.background-image]="'url(' + not.Miniatura + ')'" ></div>
+			<h4>{{not.Titulo}}</h4>
+            <p [innerHTML]='not.Descricao'></p>
+		</a>
+
+		    <a href="/wps/portal/internet/novidades/detalhes/c64498df-7fac-4eb6-be7d-0a2991048431">Leia Mais</a>
+		
+
+
+	</div>
+</div>

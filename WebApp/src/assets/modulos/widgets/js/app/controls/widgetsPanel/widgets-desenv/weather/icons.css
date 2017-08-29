@@ -1,0 +1,196 @@
+.icon-weather {
+  height: 61px;
+  width: 61px;
+  background: url("/assets/modulos/widgets/css/images/widgets/icons-weather.png") no-repeat;
+}
+
+.icon-weather.ec {
+  background-position: -5px -5px;
+}
+
+.icon-weather.ci {
+  background-position: -76px -5px;
+}
+
+.icon-weather.in {
+  background-position: -147px -5px;
+}
+
+.icon-weather.pc {
+  background-position: -218px -5px;
+}
+
+.icon-weather.pn {
+  background-position: -289px -5px;
+}
+
+.icon-weather.cv {
+  background-position: -360px -5px;
+}
+
+.icon-weather.ch {
+  background-position: -431px -5px;
+}
+
+.icon-weather.t {
+  background-position: -502px -5px;
+}
+
+.icon-weather.ps {
+  background-position: -573px -5px;
+}
+
+.icon-weather.e {
+  background-position: -644px -5px;
+}
+
+.icon-weather.n {
+  background-position: -715px -5px;
+}
+
+.icon-weather.cl {
+  background-position: -786px -5px;
+}
+
+.icon-weather.nv {
+  background-position: -857px -5px;
+}
+
+.icon-weather.g {
+  background-position: -928px -5px;
+}
+
+.icon-weather.ne {
+  background-position: -999px -5px;
+}
+
+.icon-weather.nd {
+  background-position: -1070px -5px;
+}
+
+.icon-weather.pnt {
+  background-position: -1141px -5px;
+}
+
+.icon-weather.npt {
+  background-position: -1212px -5px;
+}
+
+.icon-weather.npn {
+  background-position: -1283px -5px;
+}
+
+.icon-weather.npm {
+  background-position: -1354px -5px;
+}
+
+.icon-weather.vn {
+  background-position: -1425px -5px;
+}
+
+.icon-weather.ct {
+  background-position: -1496px -5px;
+}
+
+.icon-weather.pp {
+  background-position: -1567px -5px;
+}
+
+.icon-weather.c {
+  background-position: -1638px -5px;
+}
+
+.icon-weather.ncn {
+  background-position: -1709px -5px;
+}
+
+.icon-weather.npt {
+  background-position: -1212px -5px;
+}
+
+.icon-weather.npm {
+  background-position: -1354px -5px;
+}
+
+.icon-weather.npp {
+  background-position: -1922px -5px;
+}
+
+.icon-weather.psc {
+  background-position: -1993px -5px;
+}
+
+.icon-weather.pcm {
+  background-position: -2064px -5px;
+}
+
+.icon-weather.pct {
+  background-position: -2135px -5px;
+}
+
+.icon-weather.pcn {
+  background-position: -2206px -5px;
+}
+
+.icon-weather.ppn {
+  background-position: -2277px -5px;
+}
+
+.icon-weather.ppt {
+  background-position: -2348px -5px;
+}
+
+.icon-weather.ppm {
+  background-position: -2419px -5px;
+}
+
+.icon-weather.cm {
+  background-position: -2490px -5px;
+}
+
+.icon-weather.cn {
+  background-position: -2561px -5px;
+}
+
+.icon-weather.pt {
+  background-position: -2632px -5px;
+}
+
+.icon-weather.pm {
+  background-position: -2703px -5px;
+}
+
+.icon-weather.np {
+  background-position: -2774px -5px;
+}
+
+.forecast-featured .icon-weather {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 20px;
+  left: 50%;
+}
+
+.forecasts-others .day-item {
+  position: relative;
+}
+
+.forecasts-others .day-item .icon-weather {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  -webkit-transform: scale(0.4) translate(140%, -50%);
+  -moz-transform: scale(0.4) translate(140%, -50%);
+  -ms-transform: scale(0.4) translate(140%, -50%);
+  -o-transform: scale(0.4) translate(140%, -50%);
+  transform: scale(0.4) translate(140%, -50%);
+  -webkit-transform-origin: top right;
+  -moz-transform-origin: top right;
+  -ms-transform-origin: top right;
+  -o-transform-origin: top right;
+  transform-origin: top right;
+}

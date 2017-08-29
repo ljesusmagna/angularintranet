@@ -1,0 +1,124 @@
+@charset "UTF-8";
+.dialog-placeholder {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transform-origin: -50% -50%;
+  -moz-transform-origin: -50% -50%;
+  -ms-transform-origin: -50% -50%;
+  -o-transform-origin: -50% -50%;
+  transform-origin: -50% -50%;
+  height: 25vh;
+  width: 25vw;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.48);
+  animation: overlay-fade-in 0.15s 1;
+}
+
+.dialog-placeholder .modal-body {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  max-width: 900px;
+  padding: 15px;
+  box-shadow: 0px 2px 3px black;
+  background-color: white;
+  animation: opacity-scale-fade-in 0.275s 1;
+}
+
+.dialog-placeholder .modal-body .close-button::after {
+  content: '✖';
+}
+
+.dialog-placeholder .modal-body .slideshow-button::after {
+  content: '⧉';
+}
+
+.dialog-placeholder .modal-body .previous-button::after {
+  content: '<';
+}
+
+.dialog-placeholder .modal-body .next-button::after {
+  content: '>';
+}
+
+.dialog-placeholder .modal-body .modal-contents {
+  border-radius: 6px;
+  position: relative;
+}
+
+.dialog-placeholder .modal-body .modal-button {
+  padding: 0px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  font-size: 22px;
+  line-height: 35px;
+  text-align: center;
+  color: black;
+}
+
+.dialog-placeholder .modal-body .modal-button:hover {
+  color: white;
+  text-shadow: 0px 1px 2px black;
+}
+
+.dialog-placeholder .modal-body .external-buttons-container {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  /*    Sim, gambiarra. Sim, será corrigido.
+        O '.external-buttons-container' tinha position right -40px; ~ herdado do controle de Galeria
+        mas uma solução imediata para o botão de fechar foi trocar por 12px; ~ Por conta do controle de Widgets
+        Gambiarrado em 09/09/2016*/
+}
+
+.dialog-placeholder .modal-body .external-buttons-container.bottom {
+  top: auto;
+  bottom: 55px;
+}
+
+.dialog-placeholder .modal-body .external-buttons-container .modal-button {
+  position: relative;
+  margin-top: 15px;
+}

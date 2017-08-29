@@ -1,0 +1,25 @@
+@import '../../../../../../../dev/bourbon/_bourbon'
+
+$codes-ordered-list: ec ci in pc pn cv ch t ps e n cl nv g ne nd pnt npt npn npm vn ct pp c ncn npt npm npp psc pcm pct pcn ppn ppt ppm cm cn pt pm np
+
+.icon-weather
+  @include size(61px)
+  background: url("/assets/modulos/widgets/css/images/widgets/icons-weather.png") no-repeat
+  @each $current-code in $codes-ordered-list
+    $i: index($codes-ordered-list, $current-code) - 1
+    $offset: (-5 - 71 * $i)
+    &.#{$current-code}
+      background-position: #{$offset}px -5px
+
+.forecast-featured
+  .icon-weather
+    @include transform(translate(-50%,-50%) )
+    @include position(absolute, 20px null null 50%)
+
+.forecasts-others
+  .day-item
+    position: relative
+    .icon-weather
+      @include position(absolute, 50% 0px null null)
+      @include transform(scale(0.40) translate(140%, -50%))
+      @include transform-origin(top right)

@@ -1,0 +1,113 @@
+@import '../../../../../../../assets/modulos/widgets/css/_cptmColors.sass'
+@import '../../../../../../../dev/bourbon/_bourbon'
+@import 'icons.sass'
+
+$textNormalColor: #6d6e71
+@each $current-color in $cptm-colors-ordered-list
+  $i: index($cptm-colors-ordered-list, $current-color) + 6
+  .weather-widget.line-#{$i}:hover
+    color: $current-color
+    span
+      color: $current-color
+    .forecasts .forecast-featured
+      border-right: 1px solid $current-color
+
+.weather-widget
+  height: 100%
+  span
+    color: $textNormalColor
+
+  .fail
+    background: url("/assets/modulos/widgets/css/images/widgets/icons-weather-sad.png") no-repeat
+    background-position: center 16px
+    display: table
+    width: 100%
+    height: 100%
+    p
+      padding-top: 50px
+      display: table-cell
+      text-align: center
+      vertical-align: middle
+
+  .city
+    top: 5px
+    margin: 0px
+    padding: 0px
+    display: inline-block
+    position: absolute
+    width: 100%
+    font-size: 21px
+    text-align: center
+
+  .source
+    display: inline-block
+    bottom: 0px
+    right: 0px
+    position: absolute
+    font-style: italic
+    font-size: 0.45em
+    margin-left: 5px
+    text-align: right
+    &::before
+      content: "("
+    &::after
+      content: ")"
+
+  .forecasts
+    bottom: 10px
+    top: 30px
+    position: absolute
+    width: 100%
+
+    .max-temp, .min-temp
+      font-size: 0.9em
+      &::after
+        font-size: 9px
+        vertical-align: top
+        content: 'ºC'
+
+    .forecast-featured
+      position: relative
+      float: left
+      height: 100%
+      width: 45%
+      flex-grow: 1
+      border-right: 1px solid $textNormalColor
+      .temps-text
+        @include position('absolute', null 10px 0px null)
+        position: absolute
+      .max-temp, .min-temp
+        font-weight: bold
+        text-align: right
+
+      .max-temp
+        font-size: 1.4em
+      .day-area
+        height: 100%
+        *
+          display: block
+        .day-text
+          position: absolute
+          bottom: 4px
+          width: 100%
+          font-weight: bold
+          text-align: center
+
+    .forecasts-others
+      display: inline-block
+      vertical-align: middle
+      margin-left: 10px
+      margin-top: 2px
+      float: left
+      .min-temp, .max-temp
+        display: inline-block
+      .min-temp
+        margin: 0 5px 0 4px
+      .day-item
+        display: block
+        height: initial
+        .day-text
+          display: inline-block
+          margin: 2px 0
+          width: 90px
+          margin-right: 5px

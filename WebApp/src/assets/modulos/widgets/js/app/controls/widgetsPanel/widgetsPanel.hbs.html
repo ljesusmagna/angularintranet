@@ -1,0 +1,64 @@
+
+<script type="text/template" class="widgetsPanel-panel-template">
+  <div class="widgetsPanel-control">
+    <loader-spin params="message: 'Carregando Widgets...', topic: 'widgets'"></loader-spin>
+    <ul data-bind="foreach: { data: widgets, as: 'widget' }" class="widgetsPanel-list">
+      <li data-loaded="true" data-bind="css: { 'removing' : widget.isRemoving() === true}, attr: { 'data-code': isVisible() === true ? widget.Code : '' }, visible: isVisible" class="widgetsPanel-item-adorner">
+        <div data-bind="asWidget: widget" class="widget-adorner"></div>
+        <div class="widget-control-buttons">
+          <!--a(href="#", data-bind="click: $parent.edit.bind($data, widget)").widget-btn.sprite.EditByAlexanderSmith--><a href="#" data-bind="click: $parent.remove.bind($data, widget)" class="widget-btn sprite TrashByAlexanderSmith"></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</script>
+<script type="text/template" class="widgetsPanel-dialog-template">
+  <div class="dashboard">
+    <div class="primary-menu">
+      <nav>
+        <ul>
+          <li data-bind="click: focusTab.bind($data, 'Apps'), css: { 'active' : currentTabName() === 'Apps'}" class="center-parent"><a class="center-child">
+              <div class="sprite windowsbyGregor"></div><span>Aplicativos</span></a></li>
+          <li data-bind="click: focusTab.bind($data, 'Portals'), css: { 'active' : currentTabName() === 'Portals'}" class="center-parent"><a class="center-child">
+              <div class="sprite sharebyJuanGarces"></div><span>Portais</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content-desktop">     
+      <div data-bind="with: appViewModel" class="tab-content-adorner">
+        <div data-bind="visible: visible" class="tab-content">
+          <h2>Aplicativos</h2>
+          <hr/>
+          <ul data-bind="foreach: { data: widgets, as: 'widgetStoreView' }" class="widget-list">
+            <li data-bind="attr: { &quot;data-code&quot;: widgetStoreView.Code }" class="app-container-placeholder draggable-widget-definition">
+              <div class="app-container"><img data-bind="attr: { src: widgetStoreView.IconFileName }" class="app-icon"/>
+                <p data-bind="text: widgetStoreView.Name" class="title"></p>
+                <div class="details-panel">
+                  <p data-bind="text: widgetStoreView.Description" class="description"></p>
+                  <div class="cta hint">Clique e arraste para adicionar!</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div data-bind="with: portalViewModel" class="tab-content-adorner">
+        <div data-bind="visible: visible" class="tab-content">
+          <h2>Portais</h2>
+          <hr/>
+          <ul data-bind="foreach: { data: widgets, as: 'widgetStoreView' }" class="widget-list">
+            <li data-bind="attr: { &quot;data-code&quot;: widgetStoreView.Code }" class="app-container-placeholder draggable-widget-definition">
+              <div class="app-container"><img data-bind="attr: { src: widgetStoreView.IconFileName }" class="app-icon"/>
+                <p data-bind="text: widgetStoreView.Name" class="title"></p>
+                <div class="details-panel">
+                  <p data-bind="text: widgetStoreView.Description" class="description"></p>
+                  <div class="cta hint">Clique e arraste para adicionar!</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>

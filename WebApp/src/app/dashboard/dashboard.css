@@ -1,0 +1,21 @@
+ .items {
+    margin-top:10px;
+    margin-right: 10px;
+    max-height: 70px;
+    min-height: 50px;
+}
+.items img{
+    margin-left:30px;
+}
+.texto {
+    font-size: 14px;
+    line-height: 18px;
+    color: #5392e9;
+    border-bottom: 1px solid #5392e9;
+}
+.cabecalho {
+    color: #5392e9;
+    font-weight: bold;
+}
+
+

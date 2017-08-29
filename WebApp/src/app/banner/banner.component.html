@@ -1,0 +1,16 @@
+  <div class="slider owl-carousel owl-theme">
+    <carousel [interval]="myInterval" [noWrap]="noWrapSlides" [(activeSlide)]="activeSlideIndex">
+      <slide *ngFor="let banner of banners" [style.background-image]="'url(' + banner.BannerImage + ')'">
+        <div class="carousel-caption slider-content">
+          <h4 [innerHTML]='banner.Titulo'></h4>
+          <p [innerHTML]='banner.Descricao'></p>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+
+   
+
+
+
+

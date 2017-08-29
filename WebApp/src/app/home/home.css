@@ -1,0 +1,21 @@
+.section-one{
+    color:#595959;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-two {
+    padding: 2em 0;
+    color: #002f70;
+    background: #f4f4f4;
+}
+.section-three {
+    color: #fff;
+    background: #193a68;
+}
+
+.section-one h4,
+.section-three h4 {
+  padding: 1em 0 0;
+}
+

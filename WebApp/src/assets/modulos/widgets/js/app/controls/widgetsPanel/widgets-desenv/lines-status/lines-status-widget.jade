@@ -1,0 +1,23 @@
+//output: lines-status-widget.html
+style(type="text/css")
+  include styles.min.css
+
+script 
+  include viewModel.min.js 
+
+.lines-status-widget
+  mixin MakeLine(lineNumber, lineName)
+    .status(data-bind="with: line_"+lineNumber)
+      div(class='cptm-color-'+lineNumber, data-bind="attr:{title:status()+': '+description()}", data-toggle="tooltip")
+        span.status-number(class='cptm-bg-'+lineNumber)= lineNumber
+        span.status-name= lineName
+        a.help-bubble(data-bind="attr: { 'class': 'help-bubble '+situationColor(), 'title':status()+': '+description()}"): span.help-bubble-outer-dot: span.help-bubble-inner-dot
+    
+  h4 Situação das Linhas
+  .box
+    +MakeLine(7, 'Rubi')
+    +MakeLine(8, 'Diamante')
+    +MakeLine(9, 'Esmeralda')
+    +MakeLine(10, 'Turquesa')
+    +MakeLine(11, 'Coral')
+    +MakeLine(12, 'Safira')

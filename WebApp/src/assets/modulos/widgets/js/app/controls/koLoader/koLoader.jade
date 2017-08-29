@@ -1,0 +1,12 @@
+//output: koLoader.html
+script.loader-control-template(type="text/template")
+  .koLoader(data-bind="visible: isLoading()")
+    .loader-placeholder
+      .loader
+        .circle
+        .circle
+        .circle
+        .circle
+        .circle
+    p(data-bind="text: message")
+    

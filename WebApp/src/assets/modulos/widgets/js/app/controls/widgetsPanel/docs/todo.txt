@@ -1,0 +1,124 @@
+@TODO:
+
++(A) Margem horizontal deve ser igual a margem vertical;
++(B) Margem horizontal deve ser igual a margem vertical;
++(E) Ao mover um widget, este perde o sincronismo com o ObservableArray (foda-se);
+
+@Informações:
+  Capitais http://servicos.cptec.inpe.br/XML/capitais/condicoesAtuais.xml
+  Previsões: http://servicos.cptec.inpe.br/XML/cidade/244/previsao.xml
+  Cidades: http://servicos.cptec.inpe.br/XML/listaCidades?city=santo
+
+  @Cidades-Do-Widget-De-ClimaTempo
+  -----+-----+-----------------------
+   Id  | Abr | Nome
+  -----+-----+-----------------------
+
+  0244 | SP  | São Paulo
+  1119 | Cai | Caieiras
+  2069 | FR  | Franco da Rocha
+  2065 | FM  | Francisco Morato
+  1206 | CP  | Campo Limpo Paulista
+  5614 | VP  | Várzea Paulista
+  2841 | Ju  | Jundiaí
+  3656 | Os  | Osasco
+  1323 | Car | Carapicuíba
+  0797 | Ba  | Barueri
+  2720 | Ja  | Jandira
+  2583 | Ita | Itapevi
+  4772 | SC  | São Caetano do Sul
+  4704 | SA  | Santo André
+  3221 | Ma  | Mauá
+  4354 | RP  | Ribeirão Pires
+  4398 | RG  | Rio Grande da Serra
+  1997 | FV  | Ferraz de Vasconcelos
+  4065 | Po  | Poá
+  5268 | Su  | Suzano
+  3306 | MC  | Mogi das Cruzes
+  2607 | Itq | Itaquaquecetuba
+
+  [
+    { ch, Chuvoso },
+    { t,  Tempestade },
+    { c,  Chuva },
+    { ci, Chuvas Isoladas },
+    { ec, Encoberto com Chuvas Isoladas },
+    { npt,  Nublado com Pancadas a Tarde },
+    { npn,  Nublado com Pancadas a Noite },
+    { ppn,  Poss. de Panc. de Chuva a Noite },
+    { ppt,  Poss. de Panc. de Chuva a Tarde },
+    { ppm,  Poss. de Panc. de Chuva pela Manhã },
+    { psc,  Possibilidade de Chuva },
+    { pcm,  Possibilidade de Chuva pela Manhã },
+    { pct,  Possibilidade de Chuva a Tarde },
+    { pcn,  Possibilidade de Chuva a Noite },
+    { in, Instável },
+    { pp, Poss. de Pancadas de Chuva },
+    { cm, Chuva pela Manhã },
+    { cn, Chuva a Noite },
+    { pt, Pancadas de Chuva a Tarde },
+    { pm, Pancadas de Chuva pela Manhã },
+    { np, Nublado e Pancadas de Chuva },
+    { pc, Pancadas de Chuva },
+    { pn, Parcialmente Nublado },
+    { cv, Chuvisco },
+    { ps, Predomínio de Sol },
+    { e,  Encoberto },
+    { n,  Nublado },
+    { cl, Céu Claro },
+    { nv, Nevoeiro },
+    { g,  Geada },
+    { ne, Neve },
+    { nd, Não Definido },
+    { pnt,  Pancadas de Chuva a Noite },
+    { ncn,  Nublado com Poss. de Chuva a Noite },
+    { nct,  Nublado com Poss. de Chuva a Tarde },
+    { ncm,  Nubl. c/ Poss. de Chuva pela Manhã },
+    { npm,  Nublado com Pancadas pela Manhã },
+    { npp,  Nublado com Possibilidade de Chuva },
+    { vn, Variação de Nebulosidade },
+    { ct, Chuva a Tarde }
+  ]
+
+  @Propriedades-Dos-Widgets-De-Portais
+public class Helper {
+	public String Caption {get;set;}
+	public String href {get;set;}
+	public String Icon {get;set;}
+}
+
+void Main() {
+	Helper[] items = new [] {
+  	new Helper { Caption='Engenharia de manutenção',
+                 href='/Pages/Redir.aspx?tipo=intranet&pageUrl=host/manutencao/portal_engman/default.asp',
+                 Icon='/assets/modulos/widgets/css/images/widgets/img_em.png' },
+  	new Helper { Caption='Recursos Humanos',
+                 href='/Pages/Redir.aspx?tipo=intranet&pageUrl=host/RH/default.asp',
+                 Icon='/assets/modulos/widgets/css/images/widgets/img_rh.png' },
+  	new Helper { Caption='Tecnologia da Informação',
+                 href='/Pages/Redir.aspx?tipo=intranet&pageUrl=host/TI/Ativos_TI/default.asp',
+                 Icon='/assets/modulos/widgets/css/images/widgets/img_ti.png' },
+  	new Helper { Caption='CEDOC',
+                 href='/Pages/Redir.aspx?tipo=intranet&pageUrl=host/patrimonio/cedoc/default.asp',
+                 Icon='/assets/modulos/widgets/css/images/widgets/img_cedoc.png' },
+  	new Helper { Caption='Operação',
+                 href='/operacao/Paginas/home.aspx',
+                 Icon='/assets/modulos/widgets/css/images/widgets/img_op.png' },
+  	new Helper { Caption='Gestão de Empreendimentos',
+                 href='/Pages/Redir.aspx?tipo=intranet&pageUrl=host/projetos/gestaoempreendimentos/default.asp',
+                 Icon='/assets/modulos/widgets/css/images/widgets/img_ge.png' },
+  	new Helper { Caption='Material Rodante',
+                 href='/Pages/Redir.aspx?tipo=intranet&pageUrl=host/Manutencao/portal_mr/default.asp',
+                 Icon='/assets/modulos/widgets/css/images/widgets/img_mr.png' },
+  	new Helper { Caption='CIM',
+                 href='/Pages/Redir.aspx?tipo=intranet&pageUrl=host/Manutencao/Portal_CIM/default.asp',
+                 Icon='/assets/modulos/widgets/css/images/widgets/img_cim.png' },
+  	new Helper { Caption='Gestão de Materiais e Logística',
+                 href='/Pages/Redir.aspx?tipo=intranet&pageUrl=host/Administracao/PortalAdmMateriais/default.asp',
+                 Icon='/assets/modulos/widgets/css/images/widgets/img_logistica.png' }
+  };
+
+  foreach(var item in items) {
+
+  }
+}

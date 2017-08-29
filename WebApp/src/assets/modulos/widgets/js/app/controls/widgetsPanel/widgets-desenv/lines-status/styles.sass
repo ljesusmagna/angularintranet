@@ -1,0 +1,36 @@
+@import '../../../../../../../assets/modulos/widgets/css/_cptmColors'
+@import '../../../../../../../dev/bourbon/_bourbon'
+
+.lines-status-widget
+  padding: 10px
+  position: relative
+  width: 100%
+  height: 100%
+
+  .box
+    position: absolute
+    .status
+      float: left
+      margin: 5px
+      text-align: center
+      position: relative
+      .status-number
+        @include padding(10px)
+        @include size(50px 40px)
+        text-align: center
+        font-weight: bold
+        color: white
+        display: block
+      .status-name
+        display: block
+        font-weight: bold
+        font-size: 0.60em
+      .status-description
+        display: none
+        float: right
+        font-size: 0.75em
+      a.help-bubble
+        @include position(absolute, -1px -1px null null)
+        &:after
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.8) inset
+          border-radius: 0% 0% 0% 55%

@@ -1,0 +1,60 @@
+Listagem de caminhos de pasta para o volume Itautec IinfoWay ST4265
+O n£mero de s‚rie do volume ‚ 6CBE-1958
+C:.
+³   common.js
+³   files.txt
+³   
+ÃÄÄÄapp
+³   ÃÄÄÄcontrols
+³   ³   ÃÄÄÄsearchNews
+³   ³   ³       searchNews.js
+³   ³   ³       
+³   ³   ÀÄÄÄsocialBar
+³   ³           outlookVisitor.js
+³   ³           socialBar.hbs.html
+³   ³           socialBar.hbs.jade
+³   ³           socialBar.js
+³   ³           SocialBar_Properties.txt
+³   ³           
+³   ÃÄÄÄmodel
+³   ³   ÀÄÄÄrepository
+³   ³           featuredPortalsRepository.js
+³   ³           globalConfigurationsRepository.js
+³   ³           newsRepository.js
+³   ³           simpleRepository.js
+³   ³           
+³   ÃÄÄÄpages
+³   ³       home.js
+³   ³       news.bkp.js
+³   ³       news.js
+³   ³       newsDocument.js
+³   ³       
+³   ÀÄÄÄtemplates
+³       ÀÄÄÄnews
+³               news.hbs.html
+³               news.hbs.jade
+³               
+ÃÄÄÄlib
+³   ³   breeze.js
+³   ³   datajs-1.1.2.min.js
+³   ³   handlebars.amd.min.js
+³   ³   jquery-2.2.3.min.js
+³   ³   jquery.comet.js
+³   ³   js.cookie.js
+³   ³   q.js
+³   ³   require.js
+³   ³   text.js
+³   ³   
+³   ÃÄÄÄplugins
+³   ³       chosen.jquery.min.js
+³   ³       jquery-ui.min.js
+³   ³       
+³   ÀÄÄÄwrappers
+³           jquery-ui.wrapper.js
+³           
+ÀÄÄÄutils
+        datepicker-pt-BR.js
+        diacriticsRemoval.js
+        hbsHelpers.js
+        nowOrWhenReady.js
+        

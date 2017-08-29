@@ -1,0 +1,120 @@
+.section-one .bt-conheco,
+.box-card .bt-conheco {
+  font-size: .8em;
+  display: inline-block;
+  margin: 0 15px;
+  padding: .5em 2.5em;
+  border: 1px solid #5392e9;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  float: left;
+  width: calc(100% - 30px);
+}
+.section-one .bt-conheco:hover,
+.box-card .bt-conheco:hover {
+  color: #fff;
+  background: #5392e9;
+}
+
+.box-card {
+  margin-bottom: 2em;
+}
+
+.box-card {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 0 0 15px;
+  text-align: center;
+  color: #595959;
+  border-bottom: 1px solid #c1c1c1;
+  border-left: 1px solid #c1c1c1;
+  border-right: 1px solid #c1c1c1;
+  border-radius: 6px;
+  overflow: hidden;
+  
+}
+.box-card a {
+  color: #595959;
+}
+.box-card a:nth-child(even) {
+  font-size: .8em;
+  display: inline-block;
+  margin: 0 15px;
+  padding: .5em 2.5em;
+  border: 1px solid #c1c1c1;
+  border-radius: 6px;
+  position: relative;
+  float: left;
+  width: calc(100% - 25px);
+}
+.box-card a:nth-child(even):hover {
+  color: #fff;
+  background-color: #75ad74;
+  font-weight: bold;
+}
+
+.box-card p {
+    font-size: .9em;
+    padding: 0 1em;
+    height: 50px;
+    overflow: hidden;
+  }
+
+  .box-card h4 {    
+    font-size: 18px;
+    height: 40px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+
+
+.header{
+  background: #75ad74;
+  border-bottom: 1px solid #c1c1c1;
+  border-radius: 10px 10px 0 0;
+  float: left;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  padding-left: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.icon.icon_novidades {
+  background-image: url(../../assets/img/novidade_icon.png);
+  background-size: 20px;
+}
+.icon {
+  background-position: center left;
+  background-repeat: no-repeat;
+  float: left;
+  height: 20px;
+  position: relative;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.noticia{
+  float:left;
+  margin-top: 20px;
+}
+
+.boxImg {
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 200px;
+  border: 0 !important;
+  border-radius: 4px 4px 0 0 !important;
+}
